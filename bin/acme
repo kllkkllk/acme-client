@@ -162,7 +162,7 @@ Loop::run(function () use ($command, $climate, &$exitCode) {
     };
 
     try {
-        $exitCode = yield $command->execute($climate->arguments);
+        $exitCode = yield $commands->execute($climate->arguments);
 
         if ($exitCode === null) {
             $exitCode = 0;
